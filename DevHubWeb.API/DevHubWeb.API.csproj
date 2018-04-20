@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>  
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DevHubWeb.Configuration\DevHubWeb.Configuration.csproj" />
+    <ProjectReference Include="..\DevHubWeb.Domains\DevHubWeb.Domains.csproj" />
+    <ProjectReference Include="..\DevHubWeb.Service\DevHubWeb.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="email-html-templates\Add-Admin-Booking-Conference-Template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="email-html-templates\Add-Admin-Booking-Template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="email-html-templates\Add-Booking-Conference-Template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="email-html-templates\Add-Booking-Template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="email-html-templates\Confirm-Booking-Conference-Template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="email-html-templates\Confirm-Booking-Template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
